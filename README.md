@@ -10,7 +10,7 @@
 7) Подружить бэк с фронтом 0%
 8) Подружить бэк с бд 0%
 
-Осталось 95 дней	
+Осталось 93 дней	
 
 https://www.figma.com/file/eDbjipnnu5NkJQD2LIBbJz/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%BD%D0%BE%D0%B9-%D1%81%D0%B0%D0%B9%D1%82?node-id=0%3A1
 
