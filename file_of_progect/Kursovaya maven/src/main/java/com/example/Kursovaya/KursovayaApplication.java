@@ -1,6 +1,7 @@
 package com.example.Kursovaya;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
