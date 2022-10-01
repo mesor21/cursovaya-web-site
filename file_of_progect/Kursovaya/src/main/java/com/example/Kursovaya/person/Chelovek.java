@@ -35,4 +35,20 @@ public class Chelovek implements IChelovek, IChelovekAuntenth{
     public String getPass() {
         return pass;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurename(String surename) {
+        this.surename = surename;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
 }
