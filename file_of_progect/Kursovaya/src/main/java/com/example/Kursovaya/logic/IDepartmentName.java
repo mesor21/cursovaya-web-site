@@ -1,5 +1,5 @@
 package com.example.Kursovaya.logic;
 
-public interface IDepartament{
+public interface IDepartmentName {
     public String getDep();
 }

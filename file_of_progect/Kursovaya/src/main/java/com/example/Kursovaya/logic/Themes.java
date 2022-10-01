@@ -1,19 +1,19 @@
 package com.example.Kursovaya.logic;
 import java.util.Date;
 
-public class Themes {
-    private String themes;
+public class Themes{
+    private String theme;
     private Date daedline;
     private String departament;
-    public Themes(){};
-    public Themes(String themes, Date daedline, String departament) {
-        this.themes = themes;
+
+    public Themes(String theme, Date daedline, String departament) {
+        this.theme = theme;
         this.daedline = daedline;
-        this.departament=departament;
+        this.departament = departament;
     }
 
-    public String getThemes() {
-        return themes;
+    public String getTheme() {
+        return theme;
     }
 
     public Date getDaedline() {

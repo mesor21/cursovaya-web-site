@@ -1,6 +1,6 @@
 package com.example.Kursovaya.logic;
 
-public class Departamtnt implements IDepartament{
+public class Departamtnt implements IDepartmentName {
     private String dep;
     @Override
     public String getDep(){
