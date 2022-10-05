@@ -5,7 +5,6 @@ import com.example.Kursovaya.logic.Post;
 import com.example.Kursovaya.logic.Themes;
 
 public class DepartmentEditor extends Chelovek{
-    private String jobTitle="Department Editor";
     private Departamtnt dep4DepEditor;
 
     public Post createPost(Themes them, Author x, String postname, String comment){
@@ -22,12 +21,8 @@ public class DepartmentEditor extends Chelovek{
 
 
     public DepartmentEditor(String name, String surename, String email, String pass, Departamtnt dep4DepEditor) {
-        super(name, surename, email, pass);
+        super(name, surename, email, pass, "Department Editor");
         this.dep4DepEditor = dep4DepEditor;
-    }
-
-    public String getJobTitle() {
-        return jobTitle;
     }
 
     public Departamtnt getDep4DepEditor() {

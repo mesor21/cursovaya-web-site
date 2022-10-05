@@ -3,11 +3,9 @@ package com.example.Kursovaya.person;
 import com.example.Kursovaya.logic.Departamtnt;
 
 public class Admin extends Chelovek {
-    private String jobTitle = "Admin";
 
-    public Admin(String name, String surename, String email, String pass, String jobTitle) {
-        super(name, surename, email, pass);
-        this.jobTitle = jobTitle;
+    public Admin(String name, String surename, String email, String pass) {
+        super(name, surename, email, pass, "Admin");
     }
 
 
@@ -40,6 +38,7 @@ public class Admin extends Chelovek {
         DepartmentEditor create = new DepartmentEditor(name, surename, email, pass,dep4DepEditor);
         return create;
     }
+
     public void editDepartmentEditor(DepartmentEditor edit,String name, String surename, String email, String pass, Departamtnt dep4DepEditor){
         DepartmentEditor edit2 = new DepartmentEditor(name, surename, email, pass, dep4DepEditor);
         edit=edit2;

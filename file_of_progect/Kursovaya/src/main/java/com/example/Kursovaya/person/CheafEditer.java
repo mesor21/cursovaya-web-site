@@ -35,7 +35,7 @@ public class CheafEditer extends Chelovek{
     }
 
     public CheafEditer(String name, String surename, String email, String pass) {
-        super(name, surename, email, pass);
+        super(name, surename, email, pass, "Cheaf Editer");
     }
 
     public String getJobTitle() {
