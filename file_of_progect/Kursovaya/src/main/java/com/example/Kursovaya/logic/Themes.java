@@ -11,15 +11,12 @@ public class Themes{
         this.deadline = deadline;
         this.departament = departament;
     }
-
     public String getTheme() {
         return theme;
     }
-
     public Date getDeadline() {
         return deadline;
     }
-
     public String getDepartament() {
         return departament;
     }

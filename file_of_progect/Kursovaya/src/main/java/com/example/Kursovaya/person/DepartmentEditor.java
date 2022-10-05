@@ -8,13 +8,13 @@ public class DepartmentEditor extends Chelovek{
     private Departamtnt dep4DepEditor;
 
     public Post createPost(Themes them, Author x, String postname, String comment){
-        Post createPost = new Post(them.getTheme(), them.getDeadline(), them.getDepartament(), postname, "", comment);
+        Post createPost = new Post(them, postname, "", comment);
         return createPost;
     }
 
     //to-do edit post
     public void editPost(Post edit,Themes them, Author x, String postname, String news, String comment){
-        Post edit2 = new Post(them.getTheme(), them.getDeadline(),them.getDepartament(), postname, news,comment);
+        Post edit2 = new Post(them, postname, news,comment);
         edit = edit2;
         edit2=null;
     }

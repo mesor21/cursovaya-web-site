@@ -56,7 +56,7 @@ public class KursovayaApplication {
 
 		Post muka = depEd.createPost(Syrniki, newAuthor, "Muka good","");
 
-		System.out.println(muka.getTheme()+" "+muka.getPostName());
+		System.out.println(muka.getTheme().getTheme()+" "+muka.getPostName());
 		System.out.println(muka.getPostNews());
 		System.out.println(muka.getPostComment());
 
