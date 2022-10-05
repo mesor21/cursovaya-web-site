@@ -1,6 +1,6 @@
 package com.example.Kursovaya.person;
 
-import com.example.Kursovaya.logic.Departamtnt;
+import com.example.Kursovaya.logic.Departament;
 
 public class Admin extends Chelovek {
 
@@ -10,12 +10,12 @@ public class Admin extends Chelovek {
 
 
     //Departament
-    public Departamtnt createDepartament(String depName){
-        Departamtnt create = new Departamtnt(depName);
+    public Departament createDepartament(String depName){
+        Departament create = new Departament(depName);
         return create;
     }
-    public void editDepartament(Departamtnt edit, String depName){
-        Departamtnt edit2 = new Departamtnt(depName);
+    public void editDepartament(Departament edit, String depName){
+        Departament edit2 = new Departament(depName);
         edit = edit2;
         edit2=null;
     }
@@ -34,23 +34,23 @@ public class Admin extends Chelovek {
     }
 
     //DepartmentEditor
-    public DepartmentEditor createDepartmentEditor(String name, String surename, String email, String pass, Departamtnt dep4DepEditor){
+    public DepartmentEditor createDepartmentEditor(String name, String surename, String email, String pass, Departament dep4DepEditor){
         DepartmentEditor create = new DepartmentEditor(name, surename, email, pass,dep4DepEditor);
         return create;
     }
 
-    public void editDepartmentEditor(DepartmentEditor edit,String name, String surename, String email, String pass, Departamtnt dep4DepEditor){
+    public void editDepartmentEditor(DepartmentEditor edit,String name, String surename, String email, String pass, Departament dep4DepEditor){
         DepartmentEditor edit2 = new DepartmentEditor(name, surename, email, pass, dep4DepEditor);
         edit=edit2;
         edit2=null;
     }
 
     //Author create and edit
-    public Author createAuthor(String name, String surename, String email, String pass, Departamtnt dep4Author){
+    public Author createAuthor(String name, String surename, String email, String pass, Departament dep4Author){
         Author create = new Author(name, surename, email, pass, dep4Author);
         return create;
     }
-    public void editAuthor(Author edit, String name, String surename, String email, String pass, Departamtnt dep4Author){
+    public void editAuthor(Author edit, String name, String surename, String email, String pass, Departament dep4Author){
         Author edit2 = new Author(name, surename, email, pass, dep4Author);
         edit = edit2;
         edit2=null;

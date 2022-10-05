@@ -1,9 +1,9 @@
 package com.example.Kursovaya.logic;
 
-public class Departamtnt implements IDepartmentName {
+public class Departament implements IDepartmentName {
     private String dep;
 
-    public Departamtnt(String dep) {
+    public Departament(String dep) {
         this.dep = dep;
     }
 

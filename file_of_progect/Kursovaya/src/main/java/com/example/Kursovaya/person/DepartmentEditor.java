@@ -1,11 +1,11 @@
 package com.example.Kursovaya.person;
 
-import com.example.Kursovaya.logic.Departamtnt;
+import com.example.Kursovaya.logic.Departament;
 import com.example.Kursovaya.logic.Post;
 import com.example.Kursovaya.logic.Themes;
 
 public class DepartmentEditor extends Chelovek{
-    private Departamtnt dep4DepEditor;
+    private Departament dep4DepEditor;
 
     public Post createPost(Themes them, Author x, String postname, String comment){
         Post createPost = new Post(them, postname, "", comment);
@@ -20,12 +20,12 @@ public class DepartmentEditor extends Chelovek{
     }
 
 
-    public DepartmentEditor(String name, String surename, String email, String pass, Departamtnt dep4DepEditor) {
+    public DepartmentEditor(String name, String surename, String email, String pass, Departament dep4DepEditor) {
         super(name, surename, email, pass, "Department Editor");
         this.dep4DepEditor = dep4DepEditor;
     }
 
-    public Departamtnt getDep4DepEditor() {
+    public Departament getDep4DepEditor() {
         return dep4DepEditor;
     }
 }

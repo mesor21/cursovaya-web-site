@@ -1,21 +1,16 @@
 package com.example.Kursovaya;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 
-import com.example.Kursovaya.logic.Departamtnt;
+import com.example.Kursovaya.logic.Departament;
 import com.example.Kursovaya.logic.Post;
 import com.example.Kursovaya.logic.Themes;
 import com.example.Kursovaya.person.Admin;
 import com.example.Kursovaya.person.Author;
 import com.example.Kursovaya.person.CheafEditer;
 import com.example.Kursovaya.person.DepartmentEditor;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.concurrent.atomic.AtomicLong;
 
 @SpringBootApplication
 public class KursovayaApplication {
@@ -26,7 +21,7 @@ public class KursovayaApplication {
 		//test create Author
 
 		Admin x = new Admin("Dima","Mesor","menz@gmail.com","1234");
-		Departamtnt Lol = x.createDepartament("Lol");
+		Departament Lol = x.createDepartament("Lol");
 		Author newAuthor = x.createAuthor("Chel", "Molodoy","molchel@bk.ru", "123",Lol);
 
 		System.out.println(newAuthor.getName()+" "+newAuthor.getSurename());
