@@ -1,5 +1,6 @@
 package com.example.Kursovaya;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
@@ -12,13 +13,13 @@ import com.example.Kursovaya.person.Author;
 import com.example.Kursovaya.person.CheafEditer;
 import com.example.Kursovaya.person.DepartmentEditor;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 @SpringBootApplication
 public class KursovayaApplication {
 	public static void main(String[] args) {
-	//	SpringApplication.run(KursovayaApplication.class, args);
-		//AtomicLong x=new AtomicLong();
-		//System.out.println(x);
-		//test create Author
+		SpringApplication.run(KursovayaApplication.class, args);
+		/*
 
 		Admin x = new Admin("Dima","Mesor","menz@gmail.com","1234");
 		Departament Lol = x.createDepartament("Lol");
@@ -65,6 +66,8 @@ public class KursovayaApplication {
 		newAuthor.editPost(muka, muka.getPostNews()+" Mi vce na ney cidim)");
 
 		System.out.println(muka.getPostNews());
+
+		 */
 	}
 }
 
