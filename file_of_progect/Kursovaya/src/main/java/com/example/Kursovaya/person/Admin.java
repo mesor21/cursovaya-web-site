@@ -2,6 +2,8 @@ package com.example.Kursovaya.person;
 
 import com.example.Kursovaya.logic.Departament;
 
+import javax.persistence.Entity;
+
 public class Admin extends Chelovek {
 
     public Admin(String name, String surename, String email, String pass) {

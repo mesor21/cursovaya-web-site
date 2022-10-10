@@ -1,5 +1,6 @@
 package com.example.Kursovaya.logic;
 
+
 public class Departament implements IDepartmentName {
     private String dep;
 

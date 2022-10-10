@@ -12,6 +12,7 @@ import com.example.Kursovaya.person.Admin;
 import com.example.Kursovaya.person.Author;
 import com.example.Kursovaya.person.CheafEditer;
 import com.example.Kursovaya.person.DepartmentEditor;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -19,7 +20,6 @@ import java.util.concurrent.atomic.AtomicLong;
 public class KursovayaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(KursovayaApplication.class, args);
-		/*
 
 		Admin x = new Admin("Dima","Mesor","menz@gmail.com","1234");
 		Departament Lol = x.createDepartament("Lol");
@@ -67,7 +67,6 @@ public class KursovayaApplication {
 
 		System.out.println(muka.getPostNews());
 
-		 */
 	}
 }
 
