@@ -1,8 +1,8 @@
-/*import java.text.ParseException;  
+import java.text.ParseException;  
 import java.text.DateFormat;  
 import java.util.Date; 
-import java.text.SimpleDateFormat;*/
-/*class Test{
+import java.text.SimpleDateFormat;
+class Test{
 	public static void main(String[]args){	
 		String pattern = "HH:mm dd.MM.yyyy";
 		SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;*/
 		catch(ParseException e){e.printStackTrace();}
 	}
 }
-*/
+
 
 class Qwe{
 	public static void main(String[]args){

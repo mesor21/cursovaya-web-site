@@ -1,16 +1,21 @@
 package com.example.Kursovaya.person;
 
-import com.example.Kursovaya.logic.Departamtnt;
-
-import java.net.DatagramPacket;
+import com.example.Kursovaya.logic.Departament;
+import com.example.Kursovaya.logic.Post;
 
 public class Author extends Chelovek{
-    protected String jobTitle="Author";
-    protected Departamtnt dep4Author;
+    private Departament dep4Author;
 
-    public Author(String name, String surename, String email, String pass, String jobTitle, Departamtnt dep4Author) {
-        super(name, surename, email, pass);
-        this.jobTitle = jobTitle;
+    public void editPost(Post p,String news){
+        p.setNews(news);
+    }
+
+    public Author(String name, String surename, String email, String pass, Departament dep4Author) {
+        super(name, surename, email, pass, "Author");
         this.dep4Author = dep4Author;
+    }
+
+    public Departament getDep4Author() {
+        return dep4Author;
     }
 }

@@ -1,9 +1,15 @@
-p{
+.name p{
 	color: black;
 	font-size: 30pt;
 	font-weight: normal;
-	text-align: center;	
 	front-family: Arial Black;
-	background-color: #67B6C0;
+	text-align: center;
 }
 
+.user p{
+	color: black;
+	font-size: 30pt;
+	font-weight: normal;
+	front-family: Arial Black;
+	text-align: right;
+}
