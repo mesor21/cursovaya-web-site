@@ -1,12 +1,11 @@
 package com.example.Kursovaya.logic;
 import java.util.Date;
 
-
 public class Themes{
     private String theme;
     private Date deadline;
     private String departament;
-
+    public Themes(){}
     public Themes(String theme, Date deadline, String departament) {
         this.theme = theme;
         this.deadline = deadline;

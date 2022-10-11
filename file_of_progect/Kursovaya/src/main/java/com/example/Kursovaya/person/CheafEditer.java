@@ -2,12 +2,16 @@ package com.example.Kursovaya.person;
 
 import com.example.Kursovaya.logic.Themes;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CheafEditer extends Chelovek{
 
+    public CheafEditer(){}
     public Themes createThemes(String theme, String deadline, String departament){
         String pattern = "HH:mm dd.MM.yyyy";
         SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);

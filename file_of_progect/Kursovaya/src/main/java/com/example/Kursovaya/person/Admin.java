@@ -2,10 +2,8 @@ package com.example.Kursovaya.person;
 
 import com.example.Kursovaya.logic.Departament;
 
-import javax.persistence.Entity;
-
 public class Admin extends Chelovek {
-
+    public Admin(){}
     public Admin(String name, String surename, String email, String pass) {
         super(name, surename, email, pass, "Admin");
     }
@@ -48,12 +46,12 @@ public class Admin extends Chelovek {
     }
 
     //Author create and edit
-    public Author createAuthor(String name, String surename, String email, String pass, Departament dep4Author){
-        Author create = new Author(name, surename, email, pass, dep4Author);
+    public Author createAuthor(String name, String surename, String email, String pass){
+        Author create = new Author(name, surename, email, pass);
         return create;
     }
-    public void editAuthor(Author edit, String name, String surename, String email, String pass, Departament dep4Author){
-        Author edit2 = new Author(name, surename, email, pass, dep4Author);
+    public void editAuthor(Author edit, String name, String surename, String email, String pass){
+        Author edit2 = new Author(name, surename, email, pass);
         edit = edit2;
         edit2=null;
     }
