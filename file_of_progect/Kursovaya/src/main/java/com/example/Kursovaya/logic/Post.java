@@ -1,7 +1,22 @@
 package com.example.Kursovaya.logic;
 
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
 public class Post implements IPostPublic{
-    // To-Do Добавить Тему поста
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "post")
+    private Set<Themes> them;
+
+    public void setThem(Set<Themes> them) {
+        this.them = them;
+    }
+
+    public Set<Themes> getThem() {
+        return them;
+    }
+
+    private @Id @GeneratedValue Long id;
     private String postName;
     private String news;
     private String comment;
@@ -26,5 +41,9 @@ public class Post implements IPostPublic{
 
     public String getPostComment() {
         return comment;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
