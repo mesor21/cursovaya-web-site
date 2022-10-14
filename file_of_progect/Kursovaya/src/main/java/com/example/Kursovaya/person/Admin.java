@@ -3,11 +3,9 @@ package com.example.Kursovaya.person;
 import com.example.Kursovaya.logic.Departament;
 
 public class Admin extends Chelovek {
-    public Admin(){}
     public Admin(String name, String surename, String email, String pass) {
         super(name, surename, email, pass, "Admin");
     }
-
 
     //Departament
     public Departament createDepartament(String depName){

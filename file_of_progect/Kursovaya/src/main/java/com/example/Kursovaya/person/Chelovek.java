@@ -1,12 +1,15 @@
 package com.example.Kursovaya.person;
 
 import com.example.Kursovaya.logic.Departament;
+import com.example.Kursovaya.person.IChelovek;
+import com.example.Kursovaya.person.IChelovekAuntenth;
 
 import javax.persistence.*;
 
 @Entity
-public class Chelovek implements IChelovek, IChelovekAuntenth{
+public class Chelovek implements IChelovek, IChelovekAuntenth {
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+
     private Departament dep;
     private @Id @GeneratedValue Long id;
     private String name;
