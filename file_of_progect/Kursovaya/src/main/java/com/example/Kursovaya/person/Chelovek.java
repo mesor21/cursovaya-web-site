@@ -1,8 +1,6 @@
 package com.example.Kursovaya.person;
 
 import com.example.Kursovaya.logic.Departament;
-import com.example.Kursovaya.person.IChelovek;
-import com.example.Kursovaya.person.IChelovekAuntenth;
 
 import javax.persistence.*;
 
