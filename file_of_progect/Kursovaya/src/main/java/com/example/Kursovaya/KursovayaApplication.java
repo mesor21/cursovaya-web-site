@@ -13,13 +13,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 @EntityScan(basePackages="com.example.Kursovaya")
 public class KursovayaApplication {
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(KursovayaApplication.class, args);
-		context.refresh();
-
-		ChelovekRepository rep = context.getBean(ChelovekRepository.class);
-		
-		rep.save(new Chelovek("Dima","M","123@123","567","admin"));
-
+		SpringApplication.run(KursovayaApplication.class, args);
 	}
 }
 
