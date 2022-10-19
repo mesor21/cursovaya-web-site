@@ -11,7 +11,7 @@ public class Departament implements IDepartmentName {
     private String dep;
     private @Id @GeneratedValue Long id;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "dep")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "departament")
     private Set<Chelovek> user;
 
     public Set<Chelovek> getUser() {

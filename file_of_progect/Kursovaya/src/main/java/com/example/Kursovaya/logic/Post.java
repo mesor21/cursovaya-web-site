@@ -1,7 +1,13 @@
 package com.example.Kursovaya.logic;
 
+import javax.persistence.*;
+
+@Entity
 public class Post implements IPostPublic{
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    private Themes them;
     // To-Do Добавить Тему поста
+    private @Id @GeneratedValue Long id;
     private String postName;
     private String news;
     private String comment;
