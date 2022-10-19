@@ -1,6 +1,7 @@
-package com.example.Kursovaya.person;
+package com.example.Kursovaya.logic;
 
-import com.example.Kursovaya.logic.Departament;
+import com.example.Kursovaya.person.IChelovek;
+import com.example.Kursovaya.person.IChelovekAuntenth;
 
 import javax.persistence.*;
 
@@ -8,7 +9,7 @@ import javax.persistence.*;
 public class Chelovek implements IChelovek, IChelovekAuntenth {
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
 
-    private Departament dep;
+    private Departament departament;
     private @Id @GeneratedValue Long id;
     private String name;
     private String surename;
@@ -18,12 +19,13 @@ public class Chelovek implements IChelovek, IChelovekAuntenth {
 
     public Chelovek(){}
 
-    public Chelovek(String name, String surename, String email, String pass, String jobTitle) {
+    public Chelovek(String name, String surename, String email, String pass, String jobTitle, Departament departament) {
         this.name = name;
         this.surename = surename;
         this.email = email;
         this.pass = pass;
         this.jobTitle = jobTitle;
+        this.departament=departament;
     }
 
     @Override
@@ -68,10 +70,10 @@ public class Chelovek implements IChelovek, IChelovekAuntenth {
     }
 
     public Departament getDep() {
-        return dep;
+        return departament;
     }
-    public void setDep(Departament dep) {
-        this.dep = dep;
+    public void setDep(Departament departament) {
+        this.departament = departament;
     }
 
     public Long getId() {

@@ -11,7 +11,7 @@ public class Authentication {
     public String auth(){
         return "simple_request.html";
     }
-    @PostMapping("/auth1")
+    @PostMapping("")
     public String login(){
         return "admin.html";
     }

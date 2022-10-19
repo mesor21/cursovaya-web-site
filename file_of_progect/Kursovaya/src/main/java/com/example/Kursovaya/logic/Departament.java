@@ -1,7 +1,5 @@
 package com.example.Kursovaya.logic;
 
-import com.example.Kursovaya.person.Chelovek;
-
 import javax.persistence.*;
 import java.util.Set;
 

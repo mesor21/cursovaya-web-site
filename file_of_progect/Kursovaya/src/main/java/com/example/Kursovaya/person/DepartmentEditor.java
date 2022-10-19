@@ -1,6 +1,6 @@
 package com.example.Kursovaya.person;
 
-import com.example.Kursovaya.logic.Departament;
+import com.example.Kursovaya.logic.Chelovek;
 import com.example.Kursovaya.logic.Post;
 import com.example.Kursovaya.logic.Themes;
 
@@ -18,7 +18,6 @@ public class DepartmentEditor extends Chelovek {
         edit2=null;
     }
 
-    public DepartmentEditor(String name, String surename, String email, String pass, Departament dep4DepEditor) {
-        super(name, surename, email, pass, "Department Editor");
+    public DepartmentEditor(){
     }
 }

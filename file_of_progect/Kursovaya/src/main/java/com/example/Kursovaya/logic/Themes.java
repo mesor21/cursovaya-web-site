@@ -1,12 +1,12 @@
 package com.example.Kursovaya.logic;
-import com.example.Kursovaya.person.Chelovek;
 
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
 
+@Entity
 public class Themes{
+    private @Id @GeneratedValue Long id;
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "them")
     private Set<Post> user;
     private String theme;
