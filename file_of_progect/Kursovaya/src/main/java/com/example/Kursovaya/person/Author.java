@@ -8,5 +8,4 @@ public class Author{
         p.setNews(news);
     }
     public Author(){}
-
 }
