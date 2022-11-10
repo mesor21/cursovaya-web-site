@@ -1,23 +1,21 @@
 package com.example.Kursovaya.logic;
 
-import java.util.Date;
-import java.util.UUID;
+import javax.persistence.*;
 
+@Entity
 public class Post implements IPostPublic{
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    private Themes them;
     // To-Do Добавить Тему поста
-    private Themes theme;
+    private @Id @GeneratedValue Long id;
     private String postName;
     private String news;
     private String comment;
-
-    public Post(Themes theme, String postName, String news, String comment) {
-        this.theme= theme;
+    public Post(){}
+    public Post(String postName, String news, String comment) {
         this.postName = postName;
         this.news = news;
         this.comment = comment;
-    }
-    public Themes getTheme(){
-        return theme;
     }
     public void setNews(String news) {
         this.news = news;
