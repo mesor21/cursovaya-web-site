@@ -9,6 +9,7 @@ public class Author extends Chelovek{
     public void editPost(Post p,String news){
         p.setNews(news);
     }
+<<<<<<< HEAD
 
     public Author(String name, String surename, String email, String pass, Departament dep4Author) {
         super(name, surename, email, pass, "Author");
@@ -18,4 +19,8 @@ public class Author extends Chelovek{
     public Departament getDep4Author() {
         return dep4Author;
     }
+=======
+    public Author(){}
+
+>>>>>>> parent of 2d40216 (test)
 }
