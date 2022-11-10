@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class LoginController {
-    @Autowired
-    private ChelovekRepository userRepo;
-
     @GetMapping("/login")
     public String login(){
         return "login";
