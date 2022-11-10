@@ -1,18 +1,31 @@
-package com.example.Kursovaya.person;
+package com.example.Kursovaya.logic;
 
-public class Chelovek implements IChelovek, IChelovekAuntenth{
+import com.example.Kursovaya.person.IChelovek;
+import com.example.Kursovaya.person.IChelovekAuntenth;
+
+import javax.persistence.*;
+
+@Entity
+public class Chelovek implements IChelovek, IChelovekAuntenth {
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+
+    private Departament departament;
+    private @Id @GeneratedValue Long id;
     private String name;
     private String surename;
     private String email;
     private String pass;
     private String jobTitle;
 
-    public Chelovek(String name, String surename, String email, String pass, String jobTitle) {
+    public Chelovek(){}
+
+    public Chelovek(String name, String surename, String email, String pass, String jobTitle, Departament departament) {
         this.name = name;
         this.surename = surename;
         this.email = email;
         this.pass = pass;
         this.jobTitle = jobTitle;
+        this.departament=departament;
     }
 
     @Override
@@ -39,6 +52,7 @@ public class Chelovek implements IChelovek, IChelovekAuntenth{
     public String getJobTitle(){
         return jobTitle;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -54,4 +68,16 @@ public class Chelovek implements IChelovek, IChelovekAuntenth{
     public void setPass(String pass) {
         this.pass = pass;
     }
+
+    public Departament getDep() {
+        return departament;
+    }
+    public void setDep(Departament departament) {
+        this.departament = departament;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
 }

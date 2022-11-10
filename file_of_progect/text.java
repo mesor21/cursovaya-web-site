@@ -2,7 +2,7 @@ import java.text.ParseException;
 import java.text.DateFormat;  
 import java.util.Date; 
 import java.text.SimpleDateFormat;
-class Test{
+/*class Test{
 	public static void main(String[]args){	
 		String pattern = "HH:mm dd.MM.yyyy";
 		SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
@@ -13,25 +13,12 @@ class Test{
 		}
 		catch(ParseException e){e.printStackTrace();}
 	}
-}
+}*/
 
-
-class Qwe{
+class str{
 	public static void main(String[]args){
-		Privet Hi = new Privet("Hi!");
-		Privet Priv=new Privet("QQ");
-		Hi=Priv;
-		Priv=null;
-		System.out.println(Hi.getX());
-	}
-}
-
-class Privet{
-	private String x;
-	public Privet(String x){
-		this.x=x;
-	}
-	public String getX(){
-		return x;
-	}
+		String x = "123";
+		String t = "123";
+		System.out.println(x==t);
+	}	
 }

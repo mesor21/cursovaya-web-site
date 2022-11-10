@@ -6,7 +6,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class CheafEditer extends Chelovek{
+public class CheafEditer{
 
     public Themes createThemes(String theme, String deadline, String departament){
         String pattern = "HH:mm dd.MM.yyyy";
@@ -32,8 +32,6 @@ public class CheafEditer extends Chelovek{
         x=tem;
         tem=null;
     }
-    
-    public CheafEditer(String name, String surename, String email, String pass) {
-        super(name, surename, email, pass, "Cheaf Editer");
-    }
+
+    public CheafEditer() {}
 }
