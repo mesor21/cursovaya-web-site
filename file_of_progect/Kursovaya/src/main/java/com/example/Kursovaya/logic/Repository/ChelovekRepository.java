@@ -11,7 +11,7 @@ import java.util.Optional;
 @Service
 @Repository
 public interface ChelovekRepository extends JpaRepository<Chelovek, Long>{
-    
+
     Optional<Chelovek> findByEmail(@Param("email") String email);
     Optional<Chelovek> findById(@Param("id")Long id);
 }

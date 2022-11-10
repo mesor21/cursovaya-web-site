@@ -1,0 +1,54 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url(Inter.woff2);
+}
+
+.verh{
+	font-size: 29px;
+	margin: auto;
+	width: 1871px;
+	height: 100px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	background-color: #67B6C0;
+	color:#363636;
+	position: relative;
+	display: block;
+}
+body{
+	font-family: 'Roboto';
+	font-weight: bolder;
+	margin: 0%;
+	background-color: #1E1E1E;
+}
+.ost{
+	color:white;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.img{
+	position: relative;
+	top:30px;
+}
+.text{
+	width: 750px;
+	position: relative;
+	margin:auto;
+}
+.sute{
+	font-style: ;
+	position: relative;
+	top: 30px;
+}
+
+
+
+
+
+
+
+/*margin-bottom: 500px; text-align: center;
+	justify-content: center;
+	align-items: center;
