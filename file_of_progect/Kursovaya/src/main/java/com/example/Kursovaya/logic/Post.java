@@ -3,34 +3,43 @@ package com.example.Kursovaya.logic;
 import javax.persistence.*;
 
 @Entity
-public class Post implements IPostPublic{
+public class Post{
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     private Themes them;
     // To-Do Добавить Тему поста
     private @Id @GeneratedValue Long id;
-    private String postName;
-    private String news;
-    private String comment;
-    public Post(){}
-    public Post(String postName, String news, String comment) {
+
+    public Post(String postName, String news, String comment, Long authorID) {
         this.postName = postName;
         this.news = news;
         this.comment = comment;
+        this.authorID = authorID;
     }
+
+    private String postName;
+    private String news;
+    private String comment;
+    private Long authorID;
+    public Post(){}
+
+
     public void setNews(String news) {
         this.news = news;
     }
 
-    @Override
     public String getPostName() {
         return postName;
     }
-    @Override
+
     public String getPostNews() {
         return news;
     }
 
     public String getPostComment() {
         return comment;
+    }
+
+    public Long getAuthorID() {
+        return authorID;
     }
 }

@@ -5,7 +5,7 @@ import java.util.Set;
 
 
 @Entity
-public class Departament implements IDepartmentName {
+public class Departament{
     private String dep;
     private @Id @GeneratedValue Long id;
 
@@ -28,7 +28,6 @@ public class Departament implements IDepartmentName {
         this.dep = dep;
     }
 
-    @Override
     public String getDep(){
         return dep;
     };
