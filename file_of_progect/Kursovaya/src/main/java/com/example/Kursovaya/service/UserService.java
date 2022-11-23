@@ -1,4 +1,3 @@
-/*
 package com.example.Kursovaya.service;
 
 import com.example.Kursovaya.Repository.ChelovekRepository;
@@ -18,4 +17,3 @@ public class UserService {
         userRepo.deleteById(id);
     }
 }
-*/
