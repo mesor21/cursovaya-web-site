@@ -1,7 +1,8 @@
+/*
 package com.example.Kursovaya.service;
 
+import com.example.Kursovaya.Repository.ChelovekRepository;
 import com.example.Kursovaya.logic.Chelovek;
-import com.example.Kursovaya.logic.Repository.ChelovekRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,3 +18,4 @@ public class UserService {
         userRepo.deleteById(id);
     }
 }
+*/

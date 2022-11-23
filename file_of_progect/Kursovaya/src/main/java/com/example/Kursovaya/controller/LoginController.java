@@ -1,18 +1,13 @@
 package com.example.Kursovaya.controller;
 
-import com.example.Kursovaya.logic.Repository.ChelovekRepository;
-import com.example.Kursovaya.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import java.net.UnknownServiceException;
 
 @Controller
 public class LoginController {
 
-    @Autowired
-    UserService service;
+    /*@Autowired
+    UserService service;*/
     //"login/styles_login.css"
     //"login/usericon.icns"
 

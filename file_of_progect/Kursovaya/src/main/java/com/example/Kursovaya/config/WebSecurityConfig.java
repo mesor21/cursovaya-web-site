@@ -27,11 +27,5 @@ public class WebSecurityConfig{
                 .and();
         return http.build();
     }
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-        auth.jdbcAuthentication()
-                .dataSource(dataSource)
-                .passwordEncoder(NoOpPasswordEncoder.getInstance())
-                .usersByUsernameQuery("select email, password from email where email=?");
-    }
 
 }
