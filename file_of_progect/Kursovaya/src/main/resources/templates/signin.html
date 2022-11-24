@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="ru">
+<head>
+    <link href="../css/styles_login.css"
+          media="all"
+          rel="stylesheet"
+          th:href="@{../css/styles_login.css}"
+          type="text/css">
+
+    <link href="../img/usericon.icns"
+          rel="icon"
+          th:href="@{/img/usericon.icns}"
+          type="image/icns">
+
+</head>
+<body>
+
+    <div class="block">
+        <div class="container">
+               <form method="post" action="/login">
+                <img src="../img/usericon.icns">
+                <div class="login"><p>Login</p></div>
+                <input class="login__input" type="text" id="login" placeholder="Username">
+                <br>
+                <input class="login__input" type="password" id="password" placeholder="Password">
+                <br>
+                <button class="custom-btn" type="submit" onclick=""><p>SIGN IN</p></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

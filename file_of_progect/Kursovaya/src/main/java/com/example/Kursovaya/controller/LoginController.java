@@ -1,6 +1,7 @@
 package com.example.Kursovaya.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -13,9 +14,12 @@ public class LoginController {
 
     @GetMapping("/login")
     public String getLoginHTML(){
-        return "vhod";
+        return "signin";
     }
 
+    @PostMapping("/login")
+    public String controlAccess(@ModelAttribute("model") Model  model){
+    }
     /*@PostMapping("/login")
     public String chekLog(*//*Chelovek user*//*)
     {
@@ -27,4 +31,5 @@ public class LoginController {
         }*//*
         return "redirect:/login";
     }*/
+
 }

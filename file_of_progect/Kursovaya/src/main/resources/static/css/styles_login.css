@@ -1,94 +1,74 @@
-.custom-btn{
-	width:250px;
-	min-height: 51px;
-	color: #fff;
-	border-radius: 5px;
-	padding: 10px 25px;
-	font-family: 'Lato', sans-serif;
-	font-weight: 500;
-	background: transparent;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	position: relative;
-	display: inline-block;
-	box-shadow: inset 2px 2px 2px 0px
-	rgba(255,255,255,.5),
-	7px 7px 20px 0px rgba(0,0,0,.1),
-	4px 4px 5px 0px rgba(0,0,0,.1);
-	outline:none;
-	margin-top: 40px;
-	margin-left: 170px;
-	display:block;
-
-}
-.btn-1{
-	background: rgba(0, 120, 240, 0.51);
-	border:none;
-}
-.btn-1:hover{
-	background: rgb(0,3,255);
-	background: linear-gradient(0deg, rgba(0,3,255,1)0%, rgba(2,126,251,1) 100%);
-}
-
 body{
-	background-color: #67B6C0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 85vh;
+    background-color: #67B6C0;
+    font-size: 30px;
+    font-family: 'Roboto';
+    font-weight: bolder;
 }
 
-.background{
-	color: gray
-}
-
-.block{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 590px;
-	height: 401px;
-
-}
-input{
-	font-size: 16px;
-	background-color: #5B5B5B;
-	border:0 solid #fff;
-	width: 240px;
-	border-bottom: 1px solid #fff;
-	outline: none;
-}
-.email{
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-	background-color: #5B5B5B;
-	color:white;
-	border-radius: 10px;
-	position: relative;
-	display: block;
-}
-.Login{
-	font-weight: 68px;
-	font-size: 31px;
-	text-align: center;
+@font-face {
+    font-family: 'Roboto';
+    src: url(Inter.woff2);
 }
 .container{
-	position: relative;
-	bottom: 40px;
+    position: relative;
+    bottom: 10%;
 }
-.kekw{
-	color:white;
+
+img{
+    width: 20%;
 }
-::-webkit-input-placeholder{
-	color:#fff;
+
+
+.block{
+    width: 45%;
+    height: 65vh;
+    margin: auto;
+    text-align: center;
+    background-color: #5B5B5B;
+    color:#fff;
+    border-radius: 10px;
+    position: relative;
+    display: block;
+    margin-top: 10%;
+
 }
-.lol{
-	margin-top: 50px;
-	color:white;
+.login{
+    font-size: 31px;
+    text-align: center;
 }
-.aboba{
-	position: relative;
-	bottom: 10px;
+.login__input{
+    font-size: 16px;
+    background-color: #5B5B5B;
+    border:0 solid #fff;
+    width: 45%;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    margin-bottom: 5%;
+    color: #fff;
+    margin-top: -1%;
 }
- 
+
+.custom-btn{
+    box-sizing: border-box;
+    position: relative;
+    width: 50%;
+    height: 10vh;
+    background: rgba(0, 120, 240, 0.51);
+    border: 1px solid rgba(64, 132, 213, 0.54);
+    border-radius: 10px;
+    border: none;
+}
+
+.custom-btn:hover{
+    background: rgb(0,3,200);
+    background: linear-gradient(0deg, rgba(0,3,255,1)0%, rgba(2,120,200,1) 100%);
+}
+p{
+    color:#fff;
+}
+
+
+
+
+
+
