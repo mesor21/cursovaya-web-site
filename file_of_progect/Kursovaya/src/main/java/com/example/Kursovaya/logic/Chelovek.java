@@ -4,12 +4,16 @@ import com.example.Kursovaya.person.IChelovek;
 import com.example.Kursovaya.person.IChelovekAuntenth;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Chelovek implements IChelovek, IChelovekAuntenth {
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
 
     private Departament departament;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Role roles;
     private @Id @GeneratedValue Long id;
     private String name;
     private String surename;
@@ -19,13 +23,21 @@ public class Chelovek implements IChelovek, IChelovekAuntenth {
 
     public Chelovek(){}
 
-    public Chelovek(String name, String surename, String email, String pass, String jobTitle, Departament departament) {
+    public Chelovek(String name, String surename, String email, String pass, Role roles, Departament departament) {
         this.name = name;
         this.surename = surename;
         this.email = email;
         this.pass = pass;
-        this.jobTitle = jobTitle;
+        this.roles=roles;
         this.departament=departament;
+    }
+
+    public void setRoles(Role roles) {
+        this.roles = roles;
+    }
+
+    public Role getRoles() {
+        return roles;
     }
 
     @Override

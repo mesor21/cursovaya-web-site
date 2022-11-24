@@ -4,6 +4,7 @@ package com.example.Kursovaya.person;
 import com.example.Kursovaya.logic.Chelovek;
 import com.example.Kursovaya.logic.Departament;
 import com.example.Kursovaya.logic.Post;
+import com.example.Kursovaya.logic.Role;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,8 +17,5 @@ public class Author extends Chelovek {
     }
 
     public Author(){}
-    public Author(String name, String surename, String email, String pass, Departament dep4author) {
-        super(name, surename, email, pass, "author", dep4author);
-    }
 
 }

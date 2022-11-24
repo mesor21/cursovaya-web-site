@@ -23,7 +23,8 @@ public class WebSecurityConfig{
         http.authorizeRequests()
                 .antMatchers("/login","/")
                 .permitAll()
-                .antMatchers("/admin/**").hasAnyAuthority("Admin")
+                .antMatchers("/admin/**").hasRole("Admin")
+                .antMatchers("/cheafEditor").hasRole("")
                 .and();
         return http.build();
     }

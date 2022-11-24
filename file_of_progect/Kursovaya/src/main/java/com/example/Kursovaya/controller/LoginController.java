@@ -19,11 +19,12 @@ public class LoginController {
 
     @PostMapping("/login")
     public String controlAccess(@ModelAttribute("model") Model  model){
+        return "";
     }
     /*@PostMapping("/login")
     public String chekLog(*//*Chelovek user*//*)
     {
-        *//*Chelovek x=new Chelovek("Dima","M","menzdd21@gmail.com","12345","admin",null);
+        *//*
         userRepo.equals(x);
         Chelovek userFromDb = userRepo.findByEmail(user.getEmail());
         if(userFromDb.getPass().equals(user.getPass())){
