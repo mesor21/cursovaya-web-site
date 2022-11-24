@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/admin")
 public class UserListController {
-    @GetMapping("/admin/UserList")//Дописать вывод листа, ток хз как
+    @GetMapping("/UserList")//Дописать вывод листа, ток хз как
     public String getList(){
-        return "adminTest";
+        return "post";
     }
 }
