@@ -1,6 +1,5 @@
 package com.example.Kursovaya.Repository;
 
-import com.example.Kursovaya.logic.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {

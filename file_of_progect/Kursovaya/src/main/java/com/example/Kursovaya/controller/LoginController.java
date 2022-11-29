@@ -17,10 +17,6 @@ public class LoginController {
         return "signin";
     }
 
-    @PostMapping("/login")
-    public String controlAccess(@ModelAttribute("model") Model  model){
-        return "";
-    }
     /*@PostMapping("/login")
     public String chekLog(*//*Chelovek user*//*)
     {

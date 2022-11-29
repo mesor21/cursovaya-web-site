@@ -12,8 +12,7 @@ public class Chelovek implements IChelovek, IChelovekAuntenth {
 
     private Departament departament;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    private Role roles;
+    private String roles;
     private @Id @GeneratedValue Long id;
     private String name;
     private String surename;
@@ -23,7 +22,7 @@ public class Chelovek implements IChelovek, IChelovekAuntenth {
 
     public Chelovek(){}
 
-    public Chelovek(String name, String surename, String email, String pass, Role roles, Departament departament) {
+    public Chelovek(String name, String surename, String email, String pass, String roles, Departament departament) {
         this.name = name;
         this.surename = surename;
         this.email = email;
@@ -32,11 +31,11 @@ public class Chelovek implements IChelovek, IChelovekAuntenth {
         this.departament=departament;
     }
 
-    public void setRoles(Role roles) {
+    public void setRoles(String roles) {
         this.roles = roles;
     }
 
-    public Role getRoles() {
+    public String getRoles() {
         return roles;
     }
 

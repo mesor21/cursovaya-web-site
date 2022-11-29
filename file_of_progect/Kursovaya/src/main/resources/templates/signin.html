@@ -12,13 +12,12 @@
           rel="icon"
           th:href="@{/img/usericon.icns}"
           type="image/icns">
-
 </head>
 <body>
 
     <div class="block">
         <div class="container">
-               <form method="post" action="/login">
+               <form action="">
                 <img src="../img/usericon.icns">
                 <div class="login"><p>Login</p></div>
                 <input class="login__input" type="text" id="login" placeholder="Username">
@@ -29,6 +28,21 @@
             </form>
         </div>
     </div>
+
+    <script>
+    inp = document.querySelector('.login__input');
+    login = document.querySelector('#login');
+    password = document.querySelector('#password');
+    btn = document.querySelector('.login_button');
+    btn.setAttribute('disabled', true)
+    inp.oninput = function(){
+        if (login.value.length < 5 && password.value.length < 10){
+            btn.setAttribute('disabled', true);
+        }else{
+                btn.removeAttribute('disabled');
+        }
+    }
+    </script>
 </body>
 </html>
 

@@ -3,7 +3,6 @@ package com.example.Kursovaya.person;
 import com.example.Kursovaya.Repository.RoleRepository;
 import com.example.Kursovaya.logic.Chelovek;
 import com.example.Kursovaya.logic.Departament;
-import com.example.Kursovaya.logic.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Admin{
@@ -25,7 +24,7 @@ public class Admin{
 
     //Admin
     public Chelovek createAdmin(String name, String surename, String email, String pass){
-        Chelovek create = new Chelovek(name,surename,email,pass, roleRepo.findByName("Admin"), null);
+        Chelovek create = new Chelovek(name,surename,email,pass, "Admin", null);
         return create;
     }
     public Chelovek editAdmin(Chelovek edit,String name, String surename, String email, String pass){
@@ -41,7 +40,7 @@ public class Admin{
         if(pass.equals("")){
             pass = edit.getPass();
         }
-        Chelovek edit2 = new Chelovek(name,surename,email,pass,roleRepo.findByName("Admin"), null);
+        Chelovek edit2 = new Chelovek(name,surename,email,pass,"Admin", null);
         edit=edit2;
         edit2=null;
         return edit;
@@ -49,7 +48,7 @@ public class Admin{
 
     //CheafEditer
     public Chelovek createCheafEditer(String name, String surename, String email, String pass){
-        Chelovek create = new Chelovek(name,surename,email,pass,roleRepo.findByName("Cheaf Editor"), null);
+        Chelovek create = new Chelovek(name,surename,email,pass,"Cheaf Editor", null);
         return create;
     }
     public Chelovek editCheafEditor(Chelovek edit,String name, String surename, String email, String pass){
@@ -65,7 +64,7 @@ public class Admin{
         if(pass.equals("")){
             pass = edit.getPass();
         }
-        Chelovek edit2 = new Chelovek(name,surename,email,pass,roleRepo.findByName("Cheaf Editor"), null);
+        Chelovek edit2 = new Chelovek(name,surename,email,pass,"Cheaf Editor", null);
         edit=edit2;
         edit2=null;
         return edit;
@@ -73,8 +72,7 @@ public class Admin{
 
     //DepartmentEditor
     public Chelovek createDepartmentEditor(String name, String surename, String email, String pass, Departament dep4DepEditor){
-        Role depEditor = new Role("Department Editor");
-        Chelovek create = new Chelovek(name, surename, email, pass,roleRepo.findByName("Department Editor"),dep4DepEditor);
+        Chelovek create = new Chelovek(name, surename, email, pass,"Department Editor",dep4DepEditor);
         return create;
     }
 
@@ -91,7 +89,7 @@ public class Admin{
         if(pass.equals("")){
             pass = edit.getPass();
         }
-        Chelovek edit2 = new Chelovek(name, surename, email, pass, roleRepo.findByName("Department Editor"), dep4DepEditor);
+        Chelovek edit2 = new Chelovek(name, surename, email, pass, "Department Editor", dep4DepEditor);
         edit=edit2;
         edit2=null;
         return edit;
@@ -99,7 +97,7 @@ public class Admin{
 
     //Author create and edit
     public Chelovek createAuthor(String name, String surename, String email, String pass, Departament dep4Author){
-        Chelovek create = new Chelovek(name, surename, email, pass, roleRepo.findByName("Author"), dep4Author);
+        Chelovek create = new Chelovek(name, surename, email, pass, "Author", dep4Author);
         return create;
     }
     public Chelovek editAuthor(Chelovek edit, String name, String surename, String email, String pass, Departament dep4Author){
@@ -115,7 +113,7 @@ public class Admin{
         if(pass.equals("")){
             pass = edit.getPass();
         }
-        Chelovek edit2 = new Chelovek(name, surename, email, pass, roleRepo.findByName("Author"), dep4Author);
+        Chelovek edit2 = new Chelovek(name, surename, email, pass, "Author", dep4Author);
         edit = edit2;
         edit2=null;
         return edit;
