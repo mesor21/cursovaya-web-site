@@ -1,13 +1,9 @@
 package com.example.Kursovaya.logic;
 
-import com.example.Kursovaya.person.IChelovek;
-import com.example.Kursovaya.person.IChelovekAuntenth;
-
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
-public class Chelovek implements IChelovek, IChelovekAuntenth {
+public class Chelovek{
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
 
     private Departament departament;
@@ -22,7 +18,7 @@ public class Chelovek implements IChelovek, IChelovekAuntenth {
 
     public Chelovek(){}
 
-    public Chelovek(String name, String surename, String email, String pass, String roles, Departament departament) {
+    public Chelovek(String name, String surename, String email, String pass, String roles, Departament departament){
         this.name = name;
         this.surename = surename;
         this.email = email;
@@ -39,27 +35,22 @@ public class Chelovek implements IChelovek, IChelovekAuntenth {
         return roles;
     }
 
-    @Override
     public String getName() {
         return name;
     }
 
-    @Override
     public String getSurename() {
         return surename;
     }
 
-    @Override
     public String getEmail() {
         return email;
     }
 
-    @Override
     public String getPass() {
         return pass;
     }
 
-    @Override
     public String getJobTitle(){
         return jobTitle;
     }

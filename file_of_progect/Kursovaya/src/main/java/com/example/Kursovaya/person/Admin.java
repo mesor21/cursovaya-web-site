@@ -1,15 +1,16 @@
 package com.example.Kursovaya.person;
 
-import com.example.Kursovaya.Repository.RoleRepository;
 import com.example.Kursovaya.logic.Chelovek;
 import com.example.Kursovaya.logic.Departament;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 public class Admin{
-    public Admin(){}
 
     @Autowired
-    RoleRepository roleRepo;
+    BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    public Admin(){}
     //Departament
     public Departament createDepartament(String depName){
         Departament create = new Departament(depName);
@@ -24,7 +25,7 @@ public class Admin{
 
     //Admin
     public Chelovek createAdmin(String name, String surename, String email, String pass){
-        Chelovek create = new Chelovek(name,surename,email,pass, "Admin", null);
+        Chelovek create = new Chelovek(name,surename,email,bCryptPasswordEncoder.encode(pass), "Admin", null);
         return create;
     }
     public Chelovek editAdmin(Chelovek edit,String name, String surename, String email, String pass){
@@ -40,7 +41,7 @@ public class Admin{
         if(pass.equals("")){
             pass = edit.getPass();
         }
-        Chelovek edit2 = new Chelovek(name,surename,email,pass,"Admin", null);
+        Chelovek edit2 = new Chelovek(name,surename,email,bCryptPasswordEncoder.encode(pass),"Admin", null);
         edit=edit2;
         edit2=null;
         return edit;
@@ -48,7 +49,7 @@ public class Admin{
 
     //CheafEditer
     public Chelovek createCheafEditer(String name, String surename, String email, String pass){
-        Chelovek create = new Chelovek(name,surename,email,pass,"Cheaf Editor", null);
+        Chelovek create = new Chelovek(name,surename,email,bCryptPasswordEncoder.encode(pass),"Cheaf Editor", null);
         return create;
     }
     public Chelovek editCheafEditor(Chelovek edit,String name, String surename, String email, String pass){
@@ -64,7 +65,7 @@ public class Admin{
         if(pass.equals("")){
             pass = edit.getPass();
         }
-        Chelovek edit2 = new Chelovek(name,surename,email,pass,"Cheaf Editor", null);
+        Chelovek edit2 = new Chelovek(name,surename,email,bCryptPasswordEncoder.encode(pass),"Cheaf Editor", null);
         edit=edit2;
         edit2=null;
         return edit;
@@ -72,7 +73,7 @@ public class Admin{
 
     //DepartmentEditor
     public Chelovek createDepartmentEditor(String name, String surename, String email, String pass, Departament dep4DepEditor){
-        Chelovek create = new Chelovek(name, surename, email, pass,"Department Editor",dep4DepEditor);
+        Chelovek create = new Chelovek(name, surename, email, bCryptPasswordEncoder.encode(pass),"Department Editor",dep4DepEditor);
         return create;
     }
 
@@ -89,7 +90,7 @@ public class Admin{
         if(pass.equals("")){
             pass = edit.getPass();
         }
-        Chelovek edit2 = new Chelovek(name, surename, email, pass, "Department Editor", dep4DepEditor);
+        Chelovek edit2 = new Chelovek(name, surename, email, bCryptPasswordEncoder.encode(pass), "Department Editor", dep4DepEditor);
         edit=edit2;
         edit2=null;
         return edit;
@@ -113,7 +114,7 @@ public class Admin{
         if(pass.equals("")){
             pass = edit.getPass();
         }
-        Chelovek edit2 = new Chelovek(name, surename, email, pass, "Author", dep4Author);
+        Chelovek edit2 = new Chelovek(name, surename, email, bCryptPasswordEncoder.encode(pass), "Author", dep4Author);
         edit = edit2;
         edit2=null;
         return edit;

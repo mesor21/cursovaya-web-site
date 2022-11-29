@@ -8,6 +8,6 @@ import java.util.Optional;
 @Repository
 public interface ChelovekRepository extends JpaRepository<Chelovek, Long>{
 
-    Optional<Chelovek> findByEmail(String email);
+    Chelovek findByEmail(String email);
     Optional<Chelovek> findById(Long id);
 }

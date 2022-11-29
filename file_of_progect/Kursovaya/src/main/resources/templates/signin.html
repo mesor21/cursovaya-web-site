@@ -17,12 +17,12 @@
 
     <div class="block">
         <div class="container">
-               <form action="">
+               <form  method="POST" th:action="@{/login}" action="/login">
                 <img src="../img/usericon.icns">
                 <div class="login"><p>Login</p></div>
-                <input class="login__input" type="text" id="login" placeholder="Username">
+                <input class="login__input" type="text"     id="login"      name="username" placeholder="Username">
                 <br>
-                <input class="login__input" type="password" id="password" placeholder="Password">
+                <input class="login__input" type="password" id="password"   name="password" placeholder="Password">
                 <br>
                 <button class="custom-btn" type="submit" onclick=""><p>SIGN IN</p></button>
             </form>
