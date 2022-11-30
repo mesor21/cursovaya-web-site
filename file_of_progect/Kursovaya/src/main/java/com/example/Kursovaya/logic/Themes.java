@@ -1,6 +1,8 @@
 package com.example.Kursovaya.logic;
 
 import javax.persistence.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
 
@@ -23,6 +25,10 @@ public class Themes{
     }
     public Date getDeadline() {
         return deadline;
+    }
+    public String getStringDeadline(){
+        DateFormat date_format = new SimpleDateFormat("yyyy-mm-dd");
+        return date_format.format(deadline);
     }
     public String getDepartament() {
         return departament;

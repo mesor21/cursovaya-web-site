@@ -137,13 +137,12 @@ table{
 </header>
     <div class="blog">
        <div class="container">
-           <form action="../html/editortheme.html">
+           <form action="../departmentEditor/">
               <button class="tab">Создание тем</button>
            </form>
-           <form action="../html/editorpublications.html">
+           <form action="../departmentEditor/listPublications">
                <button class="tab">Публикации</button>
            </form>
-        <form th:action="@{/admin/Users}" method="GET"><br>
           <p>Список публикаций</p>
            <table>
            <thead>
@@ -151,17 +150,14 @@ table{
                 <th>Публикация</th>
                 <th>Сотрудник</th>
                 <th>Дедлайн</th>
-                <th>Статус</th>
            </thead>
-            <tr th:each="UserSystem: ${allUsers}">
-                <td th:text="${UserSystem.getTheme}"></td>
-                <td th:text="${UserSystem.getPublication}"></td>
-                <td th:text="${UserSystem.getEmployee}"></td>
-                <td th:text="${UserSystem.getDeadline}"></td>
-                <td th:text="${UserSystem.getStatus}"></td>
+            <tr th:each="Post: ${depEditor}">
+                <td th:text="${post.getThem.getTheme}"></td>
+                <td th:text="${post.getPostName}"></td>
+                <td th:text="${post.getAuthorID}"></td>
+                <td th:text="${post.getStringDeadline}"></td>
             <tr>
         </table>
-        </form>
         <form action="../html/adduser.html">
               <button class="adduser">Добавить публикацию</button>
            </form>

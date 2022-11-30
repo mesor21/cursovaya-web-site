@@ -42,4 +42,8 @@ public class Post{
     public Long getAuthorID() {
         return authorID;
     }
+
+    public Themes getThem(){
+        return them;
+    }
 }

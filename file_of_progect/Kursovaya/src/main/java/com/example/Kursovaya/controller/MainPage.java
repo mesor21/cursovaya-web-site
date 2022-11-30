@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainPage {
     @GetMapping("/")
     public String mainPage(){
-        return "userdatabase";
+        return "mainpage";
     }
 }
