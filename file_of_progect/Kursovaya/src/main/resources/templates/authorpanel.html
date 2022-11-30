@@ -52,13 +52,6 @@ strong{
 .vihod__img{
     width: 80%;
 }
-.tab {
-    position: relative;
-    top:-43px;
-    overflow: hidden;
-    border: 1px solid none;
-    background-color:  #1E1E1E;
-}
 button {
     color: #FFFFFF;
     background-color: inherit;
@@ -129,41 +122,30 @@ table{
        <div class="header__inner">
             <strong>Новостной сайт</strong>
             <div class="nav">
-                <strong class="redactor">admin</strong>
-                <a href="../logout"><img class="vihod__img" src="../img/vihod.png"></a>
+                <strong class="redactor">Автор</strong>
+                <a href="/logout"><img class="vihod__img" src="../img/vihod.png"></a>
             </div>
        </div>
     </div>
 </header>
     <div class="blog">
        <div class="container">
-           <form action="../admin/userList">
-              <button class="tab">Пользователи</button>
-           </form>
-           <form action="../admin/departmentList">
-               <button class="tab">Отделы</button>
-           </form>
-            <p>Список пользователей</p>
+        <form th:action="@{/author/listAllPublications}" method="get"><br>
+            <p>Список публикаций</p>
            <table>
            <thead>
-                <th>ФИО</th>
-                <th>Должность</th>
-                <th>Логин</th>
-                <th>Пароль</th>
+                <th>Публикация</th>
+                <th>Сотрудник</th>
                 <th>Редактирование</th>
            </thead>
-                <tr th:each="chelovek: ${allUsers}">
-                <td th:text="${chelovek.getSurename}"></td>
-                <td th:text="${chelovek.getRoles}"></td>
-                <td th:text="${chelovek.getEmail}"></td>
-                <td th:text="${chelovek.getPass}"></td>
-                <td><a th:href="@{/admin/editUser/{id}(id=${chelovek.getId})}"
+            <tr th:each="post: ${post}">
+                <td>th:text="${post.getPostName}"</td>
+                <td>th:text="${post.getStringAuthorId}"</td>
+                <td><a th:href="@{/author/editPost/{id}(id=${post.getId})}"
                             class="btn3">Редактировать</a></td>
             <tr>
         </table>
-        <form action="../admin/editUser">
-              <button class="adduser">Добавить пользователя</button>
-           </form>
+        </form>
        </div>
     </div>
 </body>

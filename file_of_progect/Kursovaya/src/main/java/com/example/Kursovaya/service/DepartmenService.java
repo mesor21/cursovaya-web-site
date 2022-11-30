@@ -18,4 +18,7 @@ public class DepartmenService {
         return  departmentRep.findAll();
     }
 
+    public void addNewDep(){
+        departmentRep.save(new Departament());
+    }
 }

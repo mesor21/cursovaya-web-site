@@ -15,6 +15,7 @@ public class Departament{
     public Set<Chelovek> getUser() {
         return user;
     }
+    public String getUsername(){return user.toString();}
     public void setUser(Set<Chelovek> user) {
         this.user = user;
     }

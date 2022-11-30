@@ -85,6 +85,7 @@ strong{
     background-color: #363636;
     border-radius: 5px;
     border-color: #fff;
+    margin: 0 auto;
 }
 .confirmation{
     color:#FFFF;
@@ -160,7 +161,7 @@ input{
             <strong>Новостной сайт</strong>
             <div class="nav">
                 <strong class="redactor">admin</strong>
-                <a href="../logout"><img class="vihod__img" src="../img/vihod.png"></a>
+                <a href="/logout"><img class="vihod__img" src="../img/vihod.png"></a>
             </div>
        </div>
     </div>
@@ -169,28 +170,30 @@ input{
     <div class="blog">
         <div class="container">
             <p>Добавление нового сотрудника</p>
-            <form action="${pageContext.request.contextPath}/admin" method="post">
-               <table>
+            <form th:action="@{/admin/editUser}" method="post">
+                <table>
                    <thead>
                         <th>ФИО</th>
                         <th>Логин</th>
                         <th>Пароль</th>
                    </thead>
                     <tr th:each="UserSystem: ${allUsers}">
-                        <td><input type="text"  id="fio"        name="fio"></td>
-                        <td><input type="email" id="email"      name="email"></td>
-                        <td><input type="text"  id="password"   name="password"></td>
+                        <td><input type="text" id="fio"         name="fio"></td>
+                        <td><input type="text" id="email"      name="email"></td>
+                        <td><input type="text" id="password"    name="password"></td>
+                        <td input type="hidden" name="Id"></td>
+
                     <tr>
                 </table>
                 <button class="btn1" type="submit" method="post"> Подтвердить пользователя</button>
                 <button class="btn2" type="submit" method="post"> Удалить пользователя</button>
-            <div class="role">
+            <div class="role" name="role">
                <p>Должность</p>
-            <select name="role">
-                <option value="Cheaf Editor">Главный редактор</option>
-                <option value="Department Editor">Редактор отдела</option>
-                <option value="Author">Автор</option>
-                <option value="Admin">Администратор</option>
+            <select>
+                <option>Главный редактор</option>
+                <option>Редактор отдела</option>
+                <option>Автор</option>
+                <option>Администратор</option>
             </select>
             </div>
             </form>

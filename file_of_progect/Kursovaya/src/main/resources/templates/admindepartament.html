@@ -135,10 +135,10 @@ table{
 </header>
     <div class="blog">
        <div class="container">
-           <form action="../html/adminpanel.html">
+           <form action="../admin/userList">
               <button class="tab">Пользователи</button>
            </form>
-           <form action="../html/admindepartament.html">
+           <form action="../admin/departmentList">
                <button class="tab">Отделы</button>
            </form>
         <form th:action="@{/admin/Users}" method="GET">
@@ -146,16 +146,16 @@ table{
            <thead>
                 <th>Название отдела</th>
                 <th>Редактор отдела</th>
-                <th>Кол-во сотрудников</th>
            </thead>
-            <tr th:each="Departament: ${allDep}">
-                <td th:text="${UserSystem.dep}"></td>
-                <td th:text="${UserSystem.getRedactor}"></td>
-                <td th:text="${UserSystem.getNumber}"></td>
+            <tr th:each="departament: ${allDep}">
+                <td th:text="${departament.getDep}"></td>
+                <td th:text="${departament.getUsername}"></td>
             <tr>
         </table>
         </form>
-        <button class="adduser">Добавить отдел</button>
+           <form th:action="@{/admin/addDepartment}" method="post">
+            <button class="adduser" >Добавить отдел</button>
+           </form>
        </div>
     </div>
 </body>

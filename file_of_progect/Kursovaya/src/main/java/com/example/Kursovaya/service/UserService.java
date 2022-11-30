@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -35,16 +36,11 @@ public class UserService {
     }
 
     public boolean saveUser(Chelovek user){//согласен, роль так делать очень грамостко, но всё же
-        Chelovek userFromeBD = userRepo.findByEmail(user.getEmail());
-
-        if(userFromeBD!=null) {
-            return false;
-        }
         userRepo.save(user);
         return true;
     }
-
     public List<Chelovek> getAllUsers(){
         return userRepo.findAll();
     }
+    public Optional<Chelovek> getUserById(Long Id){return userRepo.findById(Id);}
 }

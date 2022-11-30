@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface PostRep extends JpaRepository<Post, Long>{
     List<Post> findByAuthorID(Long autorId);
+
 }

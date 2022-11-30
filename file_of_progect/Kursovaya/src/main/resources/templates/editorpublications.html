@@ -129,36 +129,37 @@ table{
        <div class="header__inner">
             <strong>Новостной сайт</strong>
             <div class="nav">
-                <strong class="redactor">admin</strong>
-                <a href="../logout"><img class="vihod__img" src="../img/vihod.png"></a>
+                <strong class="redactor">Редактор отдела</strong>
+                <a th:href="@{/logout}"><img class="vihod__img" src="../img/vihod.png"></a>
             </div>
        </div>
     </div>
 </header>
     <div class="blog">
        <div class="container">
-           <form action="../departmentEditor/">
+           <form th:action="@{/departmentEditor/listThemes}">
               <button class="tab">Создание тем</button>
            </form>
-           <form action="../departmentEditor/listPublications">
+           <form th:action="@{/departmentEditor/listPublications}">
                <button class="tab">Публикации</button>
            </form>
+        <form th:action="@{/admin/Users}" method="GET"><br>
           <p>Список публикаций</p>
            <table>
            <thead>
-                <th>Тема</th>
                 <th>Публикация</th>
                 <th>Сотрудник</th>
-                <th>Дедлайн</th>
+                <th>Редактирование</th>
            </thead>
-            <tr th:each="Post: ${depEditor}">
-                <td th:text="${post.getThem.getTheme}"></td>
-                <td th:text="${post.getPostName}"></td>
-                <td th:text="${post.getAuthorID}"></td>
-                <td th:text="${post.getStringDeadline}"></td>
-            <tr>
+               <tr th:each="post: ${post}">
+                   <td th:text="${post.getPostName}"></td>
+                   <td th:text="${post.getStringAuthorId}"></td>
+                   <td><a th:href="@{/departmentEditor/editPost/{id}(id=${post.getId})}"
+                          class="btn3">Редактировать</a></td>
+                </tr>
         </table>
-        <form action="../html/adduser.html">
+        </form>
+        <form th:action="@{/departmentEditor/addPost}">
               <button class="adduser">Добавить публикацию</button>
            </form>
        </div>

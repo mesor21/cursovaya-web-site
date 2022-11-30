@@ -101,6 +101,40 @@ strong{
     p{
         color:#fff;
     }
+td{
+    text-align: left;
+    padding-left: 10px;
+    color:#FFFFFF;
+    font-size: 12px;
+    background-color: #363636;
+    border-spacing: 0 10px;
+    height: 30px;
+}
+thead {
+    text-align: left;
+    padding-left: 10px;
+    color:#FFFFFF;
+    font-size: 12px;
+    background-color: #404040;
+    border-spacing: 0 10px;
+    height: 30px;
+ }
+th {
+    text-align: left;
+    padding-left: 10px;
+    color:#FFFFFF;
+    font-size: 12px;
+    background-color: #404040;
+    border-spacing: 0 10px;
+    height: 30px;
+ }
+table{
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+    background-color: #565656;
+    border-radius: 5px;
+}
 </style>
 
 <header class="header">
@@ -108,25 +142,38 @@ strong{
        <div class="header__inner">
             <strong>Новостной сайт</strong>
             <div class="nav">
-                <strong class="redactor">Главный редактор</strong>
-                <a href="../logout"><img class="vihod__img" src="../img/vihod.png"></a>
+                <strong class="redactor">Главынй редактор</strong>
+                <a th:href="@{/logout}"><img class="vihod__img" src="../img/vihod.png"></a>
             </div>
        </div>
     </div>
 </header>
     <div class="blog">
        <div class="container">
-           <form action="../html/editortheme.html">
+           <form th:action="@{/cheafEditor/listThemes}">
               <button class="tab button">Создание тем</button>
            </form>
-           <form action="../html/editorpublications.html">
+           <form th:action="@{/cheafEditor/listPublications}">
                <button class="tab button">Публикации</button>
            </form><br>
-            <form action="../html/adduser.html">
-              <button class="btn2" type="submit" method="post">Загрузить список</button>
-            </form>
-            <p>Список тем</p>
-             <form action="../html/adduser.html">
+           <p>Список тем</p>
+           <form th:action="@{/admin/Users}" method="GET"><br>
+           <table>
+               <thead>
+               <th>Название</th>
+               <th>Отдел</th>
+               <th>Дедлайн</th>
+               <th>Редактирование</th>
+               </thead>
+               <tr th:each="themes: ${themesList}">
+                   <td th:text="${themes.getTheme}"></td>
+                   <td th:text="${themes.getDepartament}"></td>
+                   <td th:text="${themes.getStringDeadline}"></td>
+                   <td><a th:href="@{/departmentEditor/editTheme/{id}(id=${themes.getId})}"
+                          class="btn3">Редактировать</a></td>
+               <tr>
+           </table>
+           <form >
               <button class="btn1 button" type="submit" method="post">Добавить тему</button>
             </form>
        </div>

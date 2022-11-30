@@ -13,7 +13,13 @@ public class Post{
         this.postName = postName;
         this.news = news;
         this.comment = comment;
-        this.authorID = authorID;
+        this.authorID=authorID;
+    }
+
+    public Post(String postName, String news, String comment) {
+        this.postName = postName;
+        this.news = news;
+        this.comment = comment;
     }
 
     private String postName;
@@ -22,6 +28,9 @@ public class Post{
     private Long authorID;
     public Post(){}
 
+    public Long getId() {
+        return id;
+    }
 
     public void setNews(String news) {
         this.news = news;
@@ -42,6 +51,7 @@ public class Post{
     public Long getAuthorID() {
         return authorID;
     }
+    public String getStringAuthorId(){return authorID+"";}
 
     public Themes getThem(){
         return them;
