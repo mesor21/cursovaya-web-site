@@ -5,6 +5,8 @@ import com.example.Kursovaya.logic.Chelovek;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
     @Autowired
@@ -40,5 +42,9 @@ public class UserService {
         }
         userRepo.save(user);
         return true;
+    }
+
+    public List<Chelovek> getAllUsers(){
+        return userRepo.findAll();
     }
 }

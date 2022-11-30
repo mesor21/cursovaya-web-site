@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class EditUser {
     @GetMapping("/editUser")
     public String editUser(){
-
-        return "";
+        return "adduser";
     }
 }
